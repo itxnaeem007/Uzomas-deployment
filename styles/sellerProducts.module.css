@@ -1,0 +1,33 @@
+.search__product{
+    margin-bottom: 40px;
+    padding: 5px 15px;
+    background-color:#f5f5f5;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-flow: row nowrap;
+}
+
+.span > input::placeholder {
+    border-color: teal;
+    color: #111;
+ }
+
+ .span > input:placeholder-shown {
+    border-color: teal;
+    color: #0A5A38;
+  }
+
+
+  /* ***************** */
+  /* Seller Billing */
+  .span > Select::placeholder {
+    border-color: teal;
+    color: #111;
+ }
+
+ .span > Select:placeholder-shown {
+    border-color: teal;
+    color: #0A5A38;
+  }
+

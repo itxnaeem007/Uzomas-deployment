@@ -1,0 +1,1 @@
+{"ast":null,"code":"import { jsx as _jsx } from \"react/jsx-runtime\";\nimport React from 'react';\nimport Link from 'next/link';\n\nconst FooterWidgets = () => /*#__PURE__*/_jsx(\"div\", {});\n\nexport default FooterWidgets;","map":null,"metadata":{},"sourceType":"module"}

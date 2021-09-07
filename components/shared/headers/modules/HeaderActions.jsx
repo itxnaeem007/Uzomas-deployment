@@ -1,0 +1,54 @@
+import React from 'react';
+import { connect } from 'react-redux';
+import Link from 'next/link';
+import MiniCart from '~/components/shared/headers/modules/MiniCart';
+import AccountQuickLinks from '~/components/shared/headers/modules/AccountQuickLinks';
+
+const HeaderActions = (props) => {
+    const { compare, wishlist, auth } = props;
+    // views
+    let headerAuthView;
+    if (auth.isLoggedIn && Boolean(auth.isLoggedIn) === true) {
+        headerAuthView = <AccountQuickLinks isLoggedIn={true} />;
+    } else {
+        headerAuthView = <AccountQuickLinks isLoggedIn={false} />;
+    }
+    return (
+        <div className="header__actions">
+            {/* <Link href="/account/compare">
+                <a className="header__extra">
+                    <i className="icon-chart-bars"></i>
+                    <span>
+                        <i>{compare ? compare.compareTotal : 0}</i>
+                    </span>
+                </a>
+            </Link>
+            <Link href="/account/wishlist">
+                <a className="header__extra">
+                    <i className="icon-heart"></i>
+                    <span>
+                        <i>{wishlist ? wishlist.wishlistTotal : 0}</i>
+                    </span>
+                </a>
+            </Link>
+            <MiniCart /> */}
+            {/* {headerAuthView} */}
+            {/* <Link href="/account/my-account">
+                <a>
+                    {headerAuthView.isLoggedIn ? (
+                        'Singout'
+                    ) : (
+                        // <MyAccount
+                    )}
+                </a>
+            </Link> */}
+            {headerAuthView.isLoggedIn ? (
+                <Link href="/account/my-account">SignOut</Link>
+            ) : (
+                <Link href="/account/signin">Sign In</Link>
+            )}
+        </div>
+    );
+};
+
+export default connect((state) => state)(HeaderActions);

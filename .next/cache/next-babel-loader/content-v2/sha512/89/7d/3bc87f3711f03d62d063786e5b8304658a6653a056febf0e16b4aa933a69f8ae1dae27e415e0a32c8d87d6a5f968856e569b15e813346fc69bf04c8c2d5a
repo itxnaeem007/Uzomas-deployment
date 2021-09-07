@@ -1,0 +1,1 @@
+{"ast":null,"code":"import { jsx as _jsx } from \"react/jsx-runtime\";\nimport React from 'react';\n\nvar DownloadApp = function DownloadApp() {\n  return /*#__PURE__*/_jsx(\"section\", {});\n};\n\nexport default DownloadApp;","map":null,"metadata":{},"sourceType":"module"}
